@@ -1,13 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/head"
+import Body from "./components/body.js" 
+
+const styles = {
+  pad:{
+    minHeight: 70
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+    <div>
+      <Header />
+      <div className="col-sm-12" style = {styles.pad}>
+      </div>
+      <Body />
     </div>
   );
 }

@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+}
+
+a{
+    outline: none; 
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+    outline: none; 
+    text-decoration: none;
+}
+
+.body-container{
+    min-height: 600px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+.query-container{
+    min-height: 280px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.search-btn{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 48px;
+    padding-right: 48px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: rgb(38, 144, 194);
+    font-size: 1.2em;
+    color: black;
+    
+}
