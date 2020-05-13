@@ -1,54 +1,59 @@
-import React, { Component } from "react";
-
+import React, { useState, useEffect, useContext } from "react";
 import "../styles/body.css"
+import RadioForm from "./radioForm";
+// import db from "../db.json"
+import ResultContainer from "./results.js"
+import ResultContext from "../utils/ResultContext"
+import db from "../db.json";
 
 const styles = {
     bigPad:{
-      minHeight: 42
+      minHeight: 80 
     },
     littlePad: {
         minHeight: 26
     },
     centerText:{
         textAlign: "center"
+    },
+    test: {
+        backgroundColor: "red",
+        height: 400
     }
   }
 
-class Body extends Component {
-    state = {
-        search: "",
-        results: []
-    }
+    function Body(){
+        const [resultListState, setResultListState] = useState(db)
+        const [resultState, setResultState] = useState({})
 
-    render(){
-        return (
-            <div>
-                <div className="col-sm-12">
+    return (
+        <ResultContext.Provider value={resultListState}>
+            <div className="col-sm-12">
+            </div>
+            <div className="row">
+                <div className="col-sm-2">
                 </div>
-                <div className="row">
-                    <div className="col-sm-2">
-                    </div>
-                    <div className="col-sm-8 body-container">
-                        <div className="row">
-                            <div className="col-sm-12" style={styles.bigPad}>
+                <div className="col-sm-8 body-container">
+                    <div className="row">
+                        <div className="col-sm-12" style={styles.bigPad}>
 
-                            </div>
-                            <div className="col-sm-1">
+                        </div>
+                        <div className="col-sm-1">
 
-                            </div>
-                            <div className="col-sm-3 query-container">
-                                <div className="col-sm-12" style={styles.littlePad}>
-                                </div>
-                                <div className="col-sm-12" style={styles.centerText}>
-                                <button className="search-btn">Search</button>
-                                </div>
-                            </div>
+                        </div>
+                        <RadioForm
+                        />
+                        <div className="col-sm-1">
+
+                        </div>
+                        <div className="col-sm-6 employee-card">
+                                <ResultContainer/>
                         </div>
                     </div>
                 </div>
             </div>
-        )
-    }
+        </ResultContext.Provider>
+    )
 }
 
 export default Body

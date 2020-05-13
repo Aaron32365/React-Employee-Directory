@@ -1,0 +1,19 @@
+[{
+    "firstName": "Aaron",
+    "lastName": "Williams",
+    "position": "Web Developer",
+    "Salary": 65000
+},
+{
+    "firstName": "Steve",
+    "lastName": "Smith",
+    "position": "Accountant",
+    "Salary": 60000
+},
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "position": "Product Manager",
+    "Salary": 85000
+}
+]

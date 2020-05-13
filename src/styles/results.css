@@ -1,0 +1,39 @@
+
+*{
+    text-overflow: clip;
+}
+#header{
+    padding-top: 12px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 10px;
+}
+ul li{
+    list-style-type: none;
+}
+
+.employee-card{
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #333738;
+    border-width: 2px;
+}
+
+
+.search-results{
+    text-overflow: clip;
+    padding-top: 22px;
+    }
+
+table {
+    border-collapse: collapse;
+  }
+  
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
