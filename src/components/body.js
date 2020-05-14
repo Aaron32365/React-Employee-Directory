@@ -21,10 +21,23 @@ const styles = {
         height: 400
     }
   }
-
+ 
     function Body(){
-        const [resultListState, setResultListState] = useState(db)
-        const [resultState, setResultState] = useState({})
+        const [resultListState, setResultList] = useState({
+            db: db,
+            sort: sortList,
+            filter: filterList
+        })
+
+        function sortList(event) {
+            const sortedArray = resultListState.db.sort((a,b) => (a.Salary < b.Salary) ? 1: -1)
+            console.log(sortedArray)
+            setResultList({...resultListState, db: sortedArray})
+        }
+
+        function filterList(){
+
+        }
 
     return (
         <ResultContext.Provider value={resultListState}>
@@ -47,7 +60,7 @@ const styles = {
 
                         </div>
                         <div className="col-sm-6 employee-card">
-                                <ResultContainer/>
+                            <ResultContainer/>
                         </div>
                     </div>
                 </div>

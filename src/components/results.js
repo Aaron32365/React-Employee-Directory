@@ -4,9 +4,7 @@ import "../styles/results.css"
 
 function ResultContainer(){
     const results = useContext(ResultContext)
-    console.log(results)
-    const resultItems = results.map((resultItem) => 
-        
+    const resultItems = results.db.map((resultItem) => 
             <tr className=" row">
                 <td className="col-sm-3">
                     {resultItem.firstName}
@@ -21,10 +19,8 @@ function ResultContainer(){
                     {resultItem.Salary}
                 </td>   
             </tr>
-        
-        
     )
-    return (
+    return ( 
         <div className="col-sm-12">
             <div className="col-sm-12" id="header">
                 Employee Directory

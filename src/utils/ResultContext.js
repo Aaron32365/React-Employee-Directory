@@ -1,7 +1,10 @@
 import React from "react";
-import db from "../db.json"
 // default context object with properties corresponding to Provider values
-const ResultContext = React.createContext();
+const ResultContext = React.createContext({
+    db: [],
+    sort: () => undefined,
+    filter: () => undefined
+});
 
 export default ResultContext;
   
