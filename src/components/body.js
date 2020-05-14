@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import "../styles/body.css"
 import RadioForm from "./radioForm";
-// import db from "../db.json"
 import ResultContainer from "./results.js"
 import ResultContext from "../utils/ResultContext"
 import db from "../db.json";
@@ -31,12 +30,16 @@ const styles = {
 
         function sortList(event) {
             const sortedArray = resultListState.db.sort((a,b) => (a.Salary < b.Salary) ? 1: -1)
-            console.log(sortedArray)
-            setResultList({...resultListState, db: sortedArray})
+            console.log("Directory sorted by descending salary: " + JSON.stringify(sortedArray))
+            return setResultList({...resultListState, db: sortedArray})
         }
 
         function filterList(){
-
+            var filteredArray = resultListState.db.filter(function(employee) {
+             return employee.position.toLowerCase().includes("manager") ;
+            });
+            console.log("Directory filtered to contain only management: " + JSON.stringify(filteredArray))
+            return setResultList({...resultListState, db: filteredArray})
         }
 
     return (

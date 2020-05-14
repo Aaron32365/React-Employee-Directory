@@ -11,7 +11,7 @@ function RadioForm(){
                     <div className="radio-container">
                         <input id="descRadio" type="radio" name="sort" onChange={context.sort}/><label>Sort by Descending Salary</label>
                         <br/>
-                        <input id="ascRadio" type="radio" name="sort" onChange={context.sort}/><label>Filter by </label>
+                        <input id="ascRadio" type="radio" name="sort" onChange={context.filter}/><label>Filter: Management only</label>
                     </div>
                 </form>
             </div>
