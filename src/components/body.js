@@ -28,7 +28,7 @@ const styles = {
             filter: filterList
         })
 
-        function sortList(event) {
+        function sortList() {
             const sortedArray = resultListState.db.sort((a,b) => (a.Salary < b.Salary) ? 1: -1)
             console.log("Directory sorted by descending salary: " + JSON.stringify(sortedArray))
             return setResultList({...resultListState, db: sortedArray})
