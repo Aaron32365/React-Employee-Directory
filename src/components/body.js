@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import "../styles/body.css"
 import RadioForm from "./radioForm";
 import ResultContainer from "./results.js"
